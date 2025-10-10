@@ -1,14 +1,14 @@
 import { View, TextInput, Image } from 'react-native'
 import {icons} from "../constants/icons"
 
-interface Props {
+type SearchBarProps = {
     placeholder: string;
     value?: string;
     onChangeText?: (text: string) => void;
     onPress?: () => void;
 }
 
-const SearchBar = ({ placeholder, value, onChangeText, onPress }: Props) => {
+const SearchBar = ({ placeholder, value, onChangeText, onPress }: SearchBarProps) => {
     return (
         <View className="flex-row items-center bg-dark-200 rounded-full px-5 py-4">
             <Image
